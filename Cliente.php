@@ -1,13 +1,48 @@
 <?php
-class Cliente
+class Cliente implements ClienteInterface
 {
+    public $id;
     public $pNome;
     public $sNome;
     public $end;
     public $tel;
     public $email;
-    public $profissao;
-    public $cpf;
+    public $doc;
+    public $tipoDoc;
+    public $stars;
+    public $endEntrega;
+
+    /**
+     * @return mixed
+     */
+    public function getEndEntrega()
+    {
+        return $this->endEntrega;
+    }
+
+    /**
+     * @param mixed $endEntrega
+     */
+    public function setEndEntrega($endEntrega)
+    {
+        $this->endEntrega = $endEntrega;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return mixed
@@ -15,22 +50,6 @@ class Cliente
     public function getPNome()
     {
         return $this->pNome;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-
-    /**
-     * @param mixed $cpf
-     */
-    public function setCpf($cpf)
-    {
-        $this->cpf = $cpf;
     }
 
     /**
@@ -108,18 +127,48 @@ class Cliente
     /**
      * @return mixed
      */
-    public function getProfissao()
+    public function getDoc()
     {
-        return $this->profissao;
+        return $this->doc;
     }
 
     /**
-     * @param mixed $profissao
+     * @param mixed $doc
      */
-    public function setProfissao($profissao)
+    public function setDoc($doc)
     {
-        $this->profissao = $profissao;
+        $this->doc = $doc;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getTipoDoc()
+    {
+        return $this->tipoDoc;
+    }
 
+    /**
+     * @param mixed $tipoDoc
+     */
+    public function setTipoDoc($tipoDoc)
+    {
+        $this->tipoDoc = $tipoDoc;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStars()
+    {
+        return $this->stars;
+    }
+
+    /**
+     * @param mixed $stars
+     */
+    public function setStars($stars)
+    {
+        $this->stars = $stars;
+    }
 }
